@@ -6,6 +6,7 @@ public class Git2Test {
 		// TODO Auto-generated method stub
 
 		System.out.println("this is second test");
+		System.out.println("this is third test");
 	}
 
 }
