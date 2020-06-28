@@ -6,6 +6,8 @@ public class sunday {
 		// TODO Auto-generated method stub
 
 		System.out.println("Ayah, anwar, kazi, Emon");
+		System.out.println("NJ, NW, Delware, Boston");
+		
 	}
 
 }
