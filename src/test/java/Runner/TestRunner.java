@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
-public class TestRunner {
+public class TestRunner { 
 	
 	private TestNGCucumberRunner testNGCucumberRunner;
 	 
