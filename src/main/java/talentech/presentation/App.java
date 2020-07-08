@@ -52,11 +52,16 @@ public class App
 		action.click().build().perform();
 		
 		
-		/*
-		WebElement quantity = driver.findElement(By.xpath("//input[@id='checkbox-type-Quantity-1 through 10-2']"));
-		action.moveToElement(quantity);
+		WebElement AddToCart = driver.findElement(By.xpath("//input[@id='add-to-cart-button']"));
+		action.moveToElement(AddToCart);
 		action.click().build().perform();
 		
+		
+		
+		WebElement Warrenty = driver.findElement(By.xpath("//button[@id='siAddCoverage-announce']"));
+		action.moveToElement(Warrenty);
+		action.click().build().perform();
+		/*
 		WebElement color=driver.findElement(By.xpath("//div[@class='result-color-container']//div[@style='background-color:#d10000;']"));
 		action.moveToElement(color);
 		action.click().build().perform();

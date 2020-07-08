@@ -20,13 +20,17 @@ public class App2 {
 		WebElement SignIn= driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
 		SignIn.click();
 		
-		WebElement email= driver.findElement(By.xpath(" //input[@id='ap_email’]"));
+		WebElement email= driver.findElement(By.xpath("//input[@id='ap_email']"));
 		email.sendKeys("emonyousufy89@gmail.com");
 		
-		WebElement password= driver.findElement(By.xpath("//input[@name='password’]"));
+		
+		WebElement Continue= driver.findElement(By.xpath("//input[@id='continue']"));
+		Continue.click();
+		
+		WebElement password= driver.findElement(By.xpath("//input[@id='ap_password']"));
 		password.sendKeys("ScrollDown22");
 		
-		WebElement submit= driver.findElement(By.xpath(" //input[@id='signInSubmit’]"));
+		WebElement submit= driver.findElement(By.xpath("//input[@id= 'signInSubmit']"));
 		submit.click();
 
 }

@@ -5,10 +5,23 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
-public class TestRunner { 
+@CucumberOptions(
+        features = "src/presentation/resources/Features",
+        glue = {"StepDefinations"},
+        monochrome= true,
+        tags = {"~@Ignore"},
+        plugin = {
+                "pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        })
+
+public class TestRunner {  
 	
 	private TestNGCucumberRunner testNGCucumberRunner;
 	 
@@ -16,12 +29,12 @@ public class TestRunner {
     public void setUpClass() throws Exception {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
-    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features3")
+    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "Features")
     public void feature(CucumberFeatureWrapper cucumberFeature) {
         testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
     }
     @DataProvider
-    public Object[][] features3() {
+    public Object[][] Features() {
         return testNGCucumberRunner.provideFeatures();
     }
     @AfterClass(alwaysRun = true)

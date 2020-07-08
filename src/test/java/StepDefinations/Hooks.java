@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class Hooks {
+public class Hooks { 
 	
 	public static WebDriver driver;
 
@@ -25,7 +25,7 @@ public class Hooks {
 	}
 	@After
 	public void tearDown() {
-		driver.quit();
+		//driver.quit(); 
 	}
 
 }
