@@ -27,8 +27,9 @@ public class SignInActions {
 	public void Password(String passwd) {
 		signinpage.passwd.sendKeys(passwd);
 	}
-	public void SignIn() {
+	public void SignIn() throws InterruptedException {
 		signinpage.signIn.click();
+		Thread.sleep(2000);
 	}
 
 }

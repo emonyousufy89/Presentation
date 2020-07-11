@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class App2 {
+public class SignInPresentation {
 	
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver");
@@ -21,8 +21,7 @@ public class App2 {
 		SignIn.click();
 		
 		WebElement email= driver.findElement(By.xpath("//input[@id='ap_email']"));
-		email.sendKeys("emonyousufy89@gmail.com");
-		
+		email.sendKeys("emonyousufy89@gmail.com");	
 		
 		WebElement Continue= driver.findElement(By.xpath("//input[@id='continue']"));
 		Continue.click();

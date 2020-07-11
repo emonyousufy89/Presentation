@@ -2,29 +2,40 @@ package Actions;
 
 import org.openqa.selenium.support.PageFactory;
 
-import Com.talentech.Stepdefination.Hooks;
-import Com.talentech.pages.LoginPage;
+import Pages.SignUpPages;
+import StepDefinations.Hooks;
+
+
 
 public class SignUpActions {
 	
-	LoginPage loginpage;
+	SignUpPages signuppage;
 
-	public LoginPageActions() {
-		loginpage = new LoginPage();
-		PageFactory.initElements(Hooks.driver, loginpage);
+	public SignUpActions() {
+		signuppage = new SignUpPages();
+		PageFactory.initElements(Hooks.driver, signuppage);
 	}
 
-	public void clickloginlink() {
-		loginpage.loginlink.click(); 
+	public void clickSignInlink() {
+		signuppage.SignInlink.click(); 
 	}
-	public void UserName(String user) {
-		loginpage.username.sendKeys(user);
+	public void clickCreateAccount() {
+		signuppage.CreateAccount.click();
 	}
-	public void Password(String passwd) {
-		loginpage.passwd.sendKeys(passwd);
+	public void EnterName(String name) {
+		signuppage.Name.sendKeys("kkkkk");
 	}
-	public void Sign() {
-		loginpage.signIn.click();
+	public void EnterEmail(String email) {
+		signuppage.email.sendKeys("jjjjj");
+	}
+	public void EnterPassword(String password) {
+		signuppage.password.sendKeys("kkkk");
+	}
+	public void ConfirmPassword(String passwd) {
+		signuppage.ConfPasswd.sendKeys("kkk");
+	}
+	public void ClickSubmit() {
+		signuppage.Submit.click();
 	}
 
 }

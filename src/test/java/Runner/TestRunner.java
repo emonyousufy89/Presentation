@@ -12,10 +12,10 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions(
         features = "src/presentation/resources/Features",
         glue = {"StepDefinations"},
-        monochrome= true,
+        monochrome= false,
         tags = {"~@Ignore"},
         plugin = {
-                "pretty",
+                "pretty", 
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"

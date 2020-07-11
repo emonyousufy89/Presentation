@@ -1,5 +1,6 @@
 package Actions;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import Pages.TelevisionPages;
@@ -8,6 +9,7 @@ import StepDefinations.Hooks;
 public class TelevisionActions {
 
 	TelevisionPages tvpage;
+	//JavascriptExecutor js=(JavascriptExecutor) tvpage;
 
 	public TelevisionActions() {
 		tvpage = new TelevisionPages();
@@ -17,7 +19,7 @@ public class TelevisionActions {
 	public void clickHamBurger() {
 		tvpage.HamburgurIcon.click();
 	}
-	public void clickElectronics() {
+	public void clickElectronics() {	
 		tvpage.Electronics.click();
 	}
 	public void clickTV() {
