@@ -22,20 +22,23 @@ public class SignUpActions {
 	public void clickCreateAccount() {
 		signuppage.CreateAccount.click();
 	}
-	public void EnterName(String name) {
-		signuppage.Name.sendKeys("kkkkk");
+	public void EnterName(String name) throws InterruptedException {
+		signuppage.Name.sendKeys(name);
+		Thread.sleep(1000);
 	}
 	public void EnterEmail(String email) {
-		signuppage.email.sendKeys("jjjjj");
+		signuppage.email.sendKeys(email);
 	}
 	public void EnterPassword(String password) {
-		signuppage.password.sendKeys("kkkk");
+		signuppage.password.sendKeys(password);
 	}
-	public void ConfirmPassword(String passwd) {
-		signuppage.ConfPasswd.sendKeys("kkk");
+	public void ConfirmPassword(String passwd) throws InterruptedException {
+		signuppage.ConfPasswd.sendKeys(passwd);
+		Thread.sleep(2000);
 	}
-	public void ClickSubmit() {
+	public void ClickSubmit() throws InterruptedException {
 		signuppage.Submit.click();
+		Thread.sleep(2000);
 	}
 
 }

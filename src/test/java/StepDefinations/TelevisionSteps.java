@@ -2,11 +2,12 @@ package StepDefinations;
 
 import Actions.SignInActions;
 import Actions.TelevisionActions;
+import Reporterutils.ExtentReportListner;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class TelevisionSteps {
+public class TelevisionSteps extends ExtentReportListner{
 	
 	TelevisionActions TVaction= new TelevisionActions();
 	
@@ -28,12 +29,12 @@ public class TelevisionSteps {
 
 	@When("^Customer clicks (\\d+) model from filtering option$")
 	public void customer_clicks_model_from_filtering_option(int arg1) throws Throwable {
-		TVaction.Year();
+		TVaction.ClickYear();
 	}
 
 	@When("^Customer clicks SAMSUNG Brand from filtering option$")
 	public void customer_clicks_SAMSUNG_Brand_from_filtering_option() throws Throwable {
-		TVaction.Brand();
+		TVaction.ClickBrand();
 	}
 
 	@Then("^Customer lands on Samsung brand listing page$")
@@ -48,7 +49,7 @@ public class TelevisionSteps {
 
 	@Then("^Customer clicks add to cart$")
 	public void customer_clicks_add_to_cart() throws Throwable {
-		TVaction.Addtocart();
+		TVaction.ClickAddtocart();
 	}
 
 	@Then("^Customer lands on warrenty option$")
@@ -58,7 +59,7 @@ public class TelevisionSteps {
 
 	@Then("^Customer clicks on add warrenty option$")
 	public void customer_clicks_on_add_warrenty_option() throws Throwable {
-		TVaction.AddWrrenty();
+		TVaction.ClickAddWrrenty();
 	}
 
 	@Then("^Customer lands on checkOut Page & see the price$")

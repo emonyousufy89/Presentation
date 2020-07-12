@@ -9,7 +9,7 @@ import StepDefinations.Hooks;
 public class TelevisionActions {
 
 	TelevisionPages tvpage;
-	//JavascriptExecutor js=(JavascriptExecutor) tvpage;
+	JavascriptExecutor js=(JavascriptExecutor) Hooks.driver;
 
 	public TelevisionActions() {
 		tvpage = new TelevisionPages();
@@ -25,19 +25,21 @@ public class TelevisionActions {
 	public void clickTV() {
 		tvpage.TV.click();
 	}
-	public void Year() {
+	public void ClickYear() {
+		js.executeScript("arguments[0].scrollIntoView();", tvpage.Year);
 		tvpage.Year.click();
 	}
-	public void Brand() {
+	public void ClickBrand() {
+		js.executeScript("arguments[0].scrollIntoView();", tvpage.Brand);
 		tvpage.Brand.click();
 	}
-	public void ItemTV() {
+	public void ClickItemTV() {
 		tvpage.ItemTv.click();
 	}
-	public void Addtocart() {
+	public void ClickAddtocart() {
 		tvpage.AddToCart.click();
 	}
-	public void AddWrrenty() {
+	public void ClickAddWrrenty() {
 		tvpage.Addwarrenty.click();
 	}
 	public void pricePrint() {

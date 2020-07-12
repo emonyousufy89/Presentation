@@ -2,11 +2,12 @@ package StepDefinations;
 
 
 import Actions.SignUpActions;
+import Reporterutils.ExtentReportListner;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class SignUpSteps {
+public class SignUpSteps extends ExtentReportListner {
 	
 	SignUpActions signupaction= new SignUpActions();
 	
@@ -25,25 +26,25 @@ public class SignUpSteps {
 	    System.out.println("the account creating page");
 	}
 
-	@When("^Enters name$")
-	public void enters_name(String name) throws Throwable {
-		signupaction.EnterName(name);
+	@When("^Customer Enters name$")
+	public void customer_Enters_name() throws Throwable {
+		signupaction.EnterName("kazi");
 	}
 
-	@When("^Enters email$")
-	public void enters_email(String email) throws Throwable {
-		signupaction.EnterEmail(email);
+	@When("^Customer Enters email$")
+	public void customer_Enters_email() throws Throwable {
+		signupaction.EnterEmail("kazi.com");
 	
 	}
 
-	@When("^Enters password$")
-	public void enters_password(String password) throws Throwable {
-		signupaction.EnterPassword(password);
+	@When("^Customer Enters password$")
+	public void customer_Enters_password() throws Throwable {
+		signupaction.EnterPassword("kaziUsaDel");
 	}
 
-	@When("^Check password$")
-	public void check_password(String passwd) throws Throwable {
-		signupaction.ConfirmPassword(passwd);
+	@When("^Customer Check password$")
+	public void customer_Check_password() throws Throwable {
+		signupaction.ConfirmPassword("kaziUsaDel");
 	   
 	}
 

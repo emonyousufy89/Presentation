@@ -18,8 +18,9 @@ public class SignInActions {
 	public void clickloginlink() {
 		signinpage.loginlink.click(); 
 	}
-	public void UserName(String user) {
+	public void UserName(String user) throws InterruptedException {
 		signinpage.username.sendKeys(user);
+		Thread.sleep(2000);
 	}
 	public void clickContinue() {
 		signinpage.conti.click(); 
