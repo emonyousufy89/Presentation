@@ -26,15 +26,17 @@ public class SignUpActions {
 		signuppage.Name.sendKeys(name);
 		Thread.sleep(1000);
 	}
-	public void EnterEmail(String email) {
+	public void EnterEmail(String email) throws InterruptedException {
 		signuppage.email.sendKeys(email);
+		Thread.sleep(1000);
 	}
-	public void EnterPassword(String password) {
+	public void EnterPassword(String password) throws InterruptedException {
 		signuppage.password.sendKeys(password);
+		Thread.sleep(1000);
 	}
 	public void ConfirmPassword(String passwd) throws InterruptedException {
 		signuppage.ConfPasswd.sendKeys(passwd);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 	}
 	public void ClickSubmit() throws InterruptedException {
 		signuppage.Submit.click();

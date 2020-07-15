@@ -20,13 +20,15 @@ public class SignInActions {
 	}
 	public void UserName(String user) throws InterruptedException {
 		signinpage.username.sendKeys(user);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 	}
-	public void clickContinue() {
-		signinpage.conti.click(); 
+	public void clickContinue() throws InterruptedException {
+		signinpage.conti.click();
+		Thread.sleep(1000);
 	}
-	public void Password(String passwd) {
+	public void Password(String passwd) throws InterruptedException {
 		signinpage.passwd.sendKeys(passwd);
+		Thread.sleep(1000);
 	}
 	public void SignIn() throws InterruptedException {
 		signinpage.signIn.click();

@@ -8,8 +8,8 @@ public class BooksPage {
 	
 	@FindBy(how=How.XPATH,using="//input[@id='twotabsearchtextbox']")
 	public WebElement SearchBox;
-	
-	@FindBy(how=How.XPATH,using="//span[@class='nav-search-submit-text nav-sprite']")
+	//span[@class='nav-search-submit-text nav-sprite'] 
+	@FindBy(how=How.XPATH,using="//input[@tabindex='20']")
 	public WebElement SearchIcon;
 	
 	@FindBy(how=How.XPATH,using="//span[@class='a-button-text a-declarative']")

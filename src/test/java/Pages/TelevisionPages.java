@@ -8,8 +8,8 @@ public class TelevisionPages {
 	
 	@FindBy(how=How.XPATH,using="//i[@class='hm-icon nav-sprite']")
 	public WebElement HamburgurIcon;
-	
-	@FindBy(how=How.XPATH,using="//a[@data-menu-id='12']//div")
+	//a[@data-menu-id='12']//div
+	@FindBy(how=How.XPATH,using="//a//div[contains(text(),'Electronics')]")
 	public WebElement Electronics;
 	
 	@FindBy(how=How.LINK_TEXT,using="TV & Video")
