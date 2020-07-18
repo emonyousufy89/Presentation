@@ -21,7 +21,7 @@ public class BooksPage {
 	@FindBy(how=How.XPATH,using="//i[@aria-label='Prime Eligible']")
 	public WebElement Prime;
 	
-	@FindBy(how=How.XPATH,using="//span[contains(text(),'Picture Books')]")
+	@FindBy(how=How.LINK_TEXT,using="Picture Books")
 	public WebElement PictureBook;
 	
 	@FindBy(how=How.XPATH,using="//span[contains(text(),'My First Reader')]")

@@ -39,12 +39,12 @@ public class TelevisionSteps extends ExtentReportListner{
 
 	@Then("^Customer lands on Samsung brand listing page$")
 	public void customer_lands_on_Samsung_brand_listing_page() throws Throwable {
-	    System.out.println("availabel Samsung tv");
+	    System.out.println("available Samsung tv");
 	}
 
 	@Then("^Customer clicks on a TV from the right side$")
 	public void customer_clicks_on_a_TV_from_the_right_side() throws Throwable {
-		TVaction.clickTV();
+		TVaction.ClickItemTV();
 	}
 
 	@Then("^Customer clicks add to cart$")

@@ -12,6 +12,10 @@
       
     </classes>
     
+    <listeners>
+			<listener class-name="Reporterutils.TestListenerImpl"></listener>
+		</listeners> 
+    
   </test> <!-- Test -->
   
 </suite> <!-- Suite -->

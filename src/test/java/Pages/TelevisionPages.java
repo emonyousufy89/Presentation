@@ -20,17 +20,17 @@ public class TelevisionPages {
 	
 	@FindBy(how=How.LINK_TEXT,using="SAMSUNG")
 	public WebElement Brand;
-	
-	@FindBy(how=How.PARTIAL_LINK_TEXT,using="SAMSUNG 65-inch Class QLED Q70T Series - 4K UHD Dual LED Quantum HDR Smart TV")
+	//img[@data-image-index='1']
+	@FindBy(how=How.LINK_TEXT,using="SAMSUNG 65-inch Class QLED Q70T Series - 4K UHD Dual LED Quantum HDR Smart TV with Alexa Built-in (QN65Q70TAFXZA, 2020 Model)")
 	public WebElement ItemTv;
 	
-	@FindBy(how=How.LINK_TEXT,using="//input[@id='add-to-cart-button']")
+	@FindBy(how=How.XPATH,using="//input[@id='add-to-cart-button']")
 	public WebElement AddToCart;
 	
-	@FindBy(how=How.LINK_TEXT,using="//button[@id='siAddCoverage-announce']")
+	@FindBy(how=How.XPATH,using="//button[@id='siAddCoverage-announce']")
 	public WebElement Addwarrenty;
 	
-	@FindBy(how=How.LINK_TEXT,using="//span[@class='a-color-price hlb-price a-inline-block a-text-bold']")
+	@FindBy(how=How.XPATH,using="//span[@class='a-color-price hlb-price a-inline-block a-text-bold']")
 	public WebElement Price;
 	
 
