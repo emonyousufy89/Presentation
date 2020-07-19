@@ -1,7 +1,11 @@
 package StepDefinations;
 
-import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.gherkin.model.Feature;
+import com.aventstack.extentreports.gherkin.model.Scenario;
 
 import Actions.SignInActions;
 import Reporterutils.ExtentReportListner;
@@ -11,45 +15,126 @@ import cucumber.api.java.en.When;
 
 public class SignInSteps extends ExtentReportListner {
 	
-	WebDriver driver;
+	ExtentTest test = null;
+	ExtentTest featureNode = null;
+	ExtentTest scenarioNode = null;
 	
 	
 	SignInActions signinaction= new SignInActions();
 	
 	@Given("^Customer clicks on Hello Sign In button$")
 	public void customer_clicks_on_Hello_Sign_In_button() throws Throwable {
+		featureNode = extent.createTest(Feature.class,"SignIn to Amazon.com");
+		scenarioNode = featureNode.createNode(Scenario.class,"Registered Customer Sign In with valid credentials");
+
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("Given"), "Customer clicks on Hello Sign In button");
 		signinaction.clickloginlink();
+		
+		logInfo.pass("User clicked the sign in link ");
+		}
+		
+		catch(AssertionError|Exception e){
+			logInfo.fail("Login link click fail");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
 	}
 
 	@Given("^Customer enters username$")
 	public void customer_enters_username() throws Throwable {
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer enters username");
 		signinaction.UserName("emonyousufy89@gmail.com");
+		logInfo.pass("User Entered email");
 	}
-
+		catch(AssertionError|Exception e){
+			logInfo.fail("User name typing failed");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
+	}
 	@When("^Customer see continue button$")
 	public void customer_see_continue_button() throws Throwable {
-		System.out.println("The title of the page is : ");
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("When"), "Customer see continue button");
+		logInfo.pass("User can see continue button");
+		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon Sign-In");
+		logInfo.pass("Expected Title : "+"Amazon Sign-In" );
+		logInfo.pass("Actual Title : "+ "Amazon Sign-In" );
+	}
+		catch(AssertionError|Exception e){
+			logInfo.fail("Next Continue Page not Displayed");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
+		System.out.println("The title of the page is : " + Hooks.driver.getTitle());
 	
 	}
 
 	@When("^Customer click continue button$")
 	public void customer_click_continue_button() throws Throwable {
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer click continue button");
 		signinaction.clickContinue();
+		
+		logInfo.pass(" Click on Continue Success");
+		}
+		
+		catch(AssertionError|Exception e){
+			logInfo.fail("Click on Continue Failed");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
 	}
 
 	@When("^Customer enters password$")
 	public void customer_enters_password() throws Throwable {
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer enters password");
 		signinaction.Password("ScrollDown22");
+		logInfo.pass("User Entered Password");
+	}
+		catch(AssertionError|Exception e){
+			logInfo.fail("Wrong password");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
+		
 	}
 
 	@When("^Customer clicks signIn button$")
 	public void customer_clicks_signIn_button() throws Throwable {
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer clicks signIn button");
 		signinaction.SignIn();
+		
+		logInfo.pass(" Customer Clicked on Sign In button");
+		}
+		
+		catch(AssertionError|Exception e){
+			logInfo.fail("Sign In button click failed");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
 	}
 
 	@Then("^Customer lands on account homepage$")
 	public void customer_lands_on_account_homepage() throws Throwable {
-		System.out.println("The title of the homepage is : ");
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on account homepage\n" + 
+				"   ");
+		logInfo.pass("Customer Successfully Landed on HomePage");
+		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon Sign-In");
+		logInfo.pass("Expected Title : "+"Amazon Sign-In" );
+		logInfo.pass("Actual Title : "+ "Amazon Sign-In" );
+	}
+		catch(AssertionError|Exception e){
+			logInfo.fail("Sign In Failed");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
+		System.out.println("The title of Customer's homepage is : " + Hooks.driver.getTitle());
 	}
 	
 	
