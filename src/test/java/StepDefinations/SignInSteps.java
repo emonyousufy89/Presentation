@@ -125,10 +125,10 @@ public class SignInSteps extends ExtentReportListner {
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on account homepage\n" + 
 				"   ");
-		logInfo.pass("Customer Successfully Landed on HomePage");
-		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon Sign-In");
-		logInfo.pass("Expected Title : "+"Amazon Sign-In" );
-		logInfo.pass("Actual Title : "+ "Amazon Sign-In" );
+		logInfo.pass("Customer Successfully Landed on Amazon User HomePage");
+		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon");
+		logInfo.pass("Expected Title : "+"Amazon" );
+		logInfo.pass("Actual Title : "+ "Amazon" );
 	}
 		catch(AssertionError|Exception e){
 			logInfo.fail("Sign In Failed");
