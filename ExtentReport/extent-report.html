@@ -43,7 +43,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 19, 2020 03:54:36 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 19, 2020 06:08:28 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -59,7 +59,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -102,10 +101,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -116,10 +115,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -130,10 +129,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='97.368%'><span class='strong'>37</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>56</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='2.632%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -151,11 +150,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>SignIn to Amazon.com</span>
-						<span class='test-time'>Jul 19, 2020 03:54:42 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Jul 19, 2020 06:08:36 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -164,10 +163,10 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
     <span class='duration right label'>0h 0m 0s+0ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Registered Customer Sign In with valid credentials</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Registered Customer Sign In with valid credentials</div>
     </div>
     <ul class='steps'>
         <li test-id='3' class='node given pass' status='pass'>
@@ -196,13 +195,11 @@
             <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks signIn button</div>
                 <div class="node-step">Customer Clicked on Sign In button</div>
         </li>
-        <li test-id='9' class='node then fail' status='fail'>
-            <div class="step-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Customer lands on account homepage</div>
-            <ul class='screenshots right'>
-                <li><a data-featherlight="image" href="ScreenShots07192020 035451735.png"><i class='material-icons'>panorama</i></a></li>
-            </ul>
+        <li test-id='9' class='node then pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer lands on account homepage</div>
                 <div class="node-step">Customer Successfully Landed on Amazon User HomePage</div>
-                <div class="node-step">Sign In Failed</div>
+                <div class="node-step">Expected Title : Amazon</div>
+                <div class="node-step">Actual Title : Amazon</div>
         </li>
     </ul>
 </div>
@@ -211,7 +208,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='10'>
 					<div class='test-heading'>
 						<span class='test-name'>Sign Up into Amazon.com</span>
-						<span class='test-time'>Jul 19, 2020 03:54:56 AM</span>
+						<span class='test-time'>Jul 19, 2020 06:08:48 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -268,7 +265,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='20'>
 					<div class='test-heading'>
 						<span class='test-name'>Book Shopping from amazon</span>
-						<span class='test-time'>Jul 19, 2020 03:55:09 AM</span>
+						<span class='test-time'>Jul 19, 2020 06:09:03 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -353,7 +350,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='36'>
 					<div class='test-heading'>
 						<span class='test-name'>Electronics shopping</span>
-						<span class='test-time'>Jul 19, 2020 03:55:32 AM</span>
+						<span class='test-time'>Jul 19, 2020 06:09:31 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -407,6 +404,128 @@
             <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks on add warrenty option</div>
                 <div class="node-step">Customer add warrenty for TV</div>
         </li>
+        <li test-id='47' class='node then pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer lands on checkOut Page & see the price</div>
+                <div class="node-step">Total price of the TV with Warrenty is : $ 1429.98</div>
+                <div class="node-step">Expected Title : $$1,429.98</div>
+                <div class="node-step">Actual Title : $$1,429.98</div>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>Fruits Shopping</span>
+						<span class='test-time'>Jul 19, 2020 06:09:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='49' status='pass'>
+    <span class='duration right label'>0h 0m 0s+0ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Customer purchase Fruits using different filtering options</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='50' class='node given pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks on hamburger icon</div>
+                <div class="node-step">Customer clicked on hamburger ICON</div>
+        </li>
+        <li test-id='51' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer select Food & Grocery from drop down</div>
+                <div class="node-step">Customer clicked on Food & Grocery</div>
+        </li>
+        <li test-id='52' class='node when pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks Amazon fresh from next drop down</div>
+                <div class="node-step">Customer clicked on Amazon fresh</div>
+        </li>
+        <li test-id='53' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks close button on pop-up windows</div>
+                <div class="node-step">Customer closed the pop up window</div>
+        </li>
+        <li test-id='54' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks Fresh Produce</div>
+                <div class="node-step">Customer clicked Fresh Produce</div>
+        </li>
+        <li test-id='55' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks Fresh Fruit</div>
+                <div class="node-step">Customer clicked Fresh Fruits</div>
+        </li>
+        <li test-id='56' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks Bananas</div>
+                <div class="node-step">Customer clicked BANANAS</div>
+        </li>
+        <li test-id='57' class='node then pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks Dole Bananas</div>
+                <div class="node-step">Customer clicked Dole-BANANAS</div>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>GiftCard Shopping from amazon</span>
+						<span class='test-time'>Jul 19, 2020 06:10:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='59' status='pass'>
+    <span class='duration right label'>0h 0m 0s+0ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful Amazon GiftCard Shopping from Amazon.com</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='60' class='node given pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer is on homepage</div>
+                <div class="node-step">User is on homepage</div>
+        </li>
+        <li test-id='61' class='node when pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer clicks on the GiftCard option</div>
+                <div class="node-step">Customer Cilced gift card tab from the top bar</div>
+        </li>
+        <li test-id='62' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer chooses Delivery Type "Mail"</div>
+                <div class="node-step">Customer selected delivery type mail</div>
+        </li>
+        <li test-id='63' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer chooses the featured brand "Amazon"</div>
+                <div class="node-step">Customer selected gift Card brand Type</div>
+        </li>
+        <li test-id='64' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer enters the price range "$25 to $50"</div>
+                <div class="node-step">Customer selected price range 25 to 50</div>
+        </li>
+        <li test-id='65' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer chooses the format "Greeting Card"</div>
+                <div class="node-step">Customer chooses the format Greeting Card</div>
+        </li>
+        <li test-id='66' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer  clicks on  the card "Amazon.com Gift Card in a Greeting Card (Various Designs)"</div>
+                <div class="node-step">Customer clicked on Amazon Card various design</div>
+        </li>
+        <li test-id='67' class='node and pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Customer adds the card to the shopping cart "Add to Cart"</div>
+                <div class="node-step">Customer add the item into the Shopping Cart</div>
+        </li>
+        <li test-id='68' class='node then pass' status='pass'>
+            <div class="step-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>the price otal should be 50.00</div>
+                <div class="node-step">The price of the gift card is : $50.00</div>
+                <div class="node-step">Expected Title : $50.00</div>
+                <div class="node-step">Actual Title : $50.00</div>
+        </li>
     </ul>
 </div>
 					</div>
@@ -439,37 +558,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>38</div>
+					<div class='panel-lead'>56</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 19, 2020 03:54:36 AM</div>
+					<div class='panel-lead'>Jul 19, 2020 06:08:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 19, 2020 03:55:53 AM</div>
+			 		<div class='panel-lead'>Jul 19, 2020 06:10:42 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 17s+207ms</div>
+					<div class='panel-lead'>0h 2m 13s+140ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -504,39 +623,39 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 4,
-				passParent: 3,
-				failParent: 1,
+                parentCount: 6,
+				passParent: 6,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
-				childCount: 4,
-				passChild: 3,
-				failChild: 1,
+				exceptionsParent: 0,
+				childCount: 6,
+				passChild: 6,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 38,
-				passGrandChild: 37,
-				failGrandChild: 1,
+				exceptionsChild: 0,
+				grandChildCount: 56,
+				passGrandChild: 56,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "SignIn to Amazon.com":0,"Sign Up into Amazon.com":0,"Book Shopping from amazon":0,"Electronics shopping":0
+			        "SignIn to Amazon.com":0,"Sign Up into Amazon.com":0,"Book Shopping from amazon":0,"Electronics shopping":0,"Fruits Shopping":0,"GiftCard Shopping from amazon":0
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/c23457b/v3html/js/extent.js' type='text/javascript'></script>

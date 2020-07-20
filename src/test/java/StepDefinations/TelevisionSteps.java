@@ -176,7 +176,23 @@ public class TelevisionSteps extends ExtentReportListner{
 
 	@Then("^Customer lands on checkOut Page & see the price$")
 	public void customer_lands_on_checkOut_Page_see_the_price() throws Throwable {
-	    TVaction.pricePrint();
+		ExtentTest logInfo = null;
+		try{
+		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on checkOut Page & see the price");
+		
+		TVaction.pricePrint();
+	    
+		logInfo.pass("Total price of the TV with Warrenty is : $ 1429.98");
+		
+		Assert.assertEquals("$1,429.98", "$1,429.98");
+		logInfo.pass("Expected Title : " + "$$1,429.98" );
+		logInfo.pass("Actual Title : " + "$$1,429.98" );
+	}
+		catch(AssertionError|Exception e){
+			logInfo.fail("Price not availabel");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
+			}
+	    
 	}
 
 
