@@ -43,8 +43,9 @@ public class TelevisionActions {
 		Thread.sleep(2000);
 	}
 	public void ClickItemTV() throws InterruptedException {
-		//js.executeScript("arguments[0].scrollIntoView();", tvpage.ItemTv);
+		js.executeScript("arguments[0].scrollIntoView();", tvpage.ItemTv);
 		wait.until(ExpectedConditions.visibilityOf(tvpage.ItemTv));
+		Thread.sleep(1000);
 		tvpage.ItemTv.click();
 		Thread.sleep(1000);
 	}

@@ -185,8 +185,8 @@ public class TelevisionSteps extends ExtentReportListner{
 		logInfo.pass("Total price of the TV with Warrenty is : $ 1429.98");
 		
 		Assert.assertEquals("$1,429.98", "$1,429.98");
-		logInfo.pass("Expected Title : " + "$$1,429.98" );
-		logInfo.pass("Actual Title : " + "$$1,429.98" );
+		logInfo.pass("Expected Price : " + "$$1,429.98" );
+		logInfo.pass("Actual Price : " + "$$1,429.98" );
 	}
 		catch(AssertionError|Exception e){
 			logInfo.fail("Price not availabel");

@@ -173,8 +173,8 @@ import cucumber.api.java.en.Given;
 			logInfo.pass("The price of the gift card is : $50.00");
 			
 			Assert.assertEquals("$50.00", "$50.00");
-			logInfo.pass("Expected Title : " + "$50.00" );
-			logInfo.pass("Actual Title : " + "$50.00" );
+			logInfo.pass("Expected Price : " + "$50.00" );
+			logInfo.pass("Actual Price : " + "$50.00" );
 		}
 			catch(AssertionError|Exception e){
 				logInfo.fail("Price not availabel");

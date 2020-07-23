@@ -47,10 +47,10 @@ public class SignInSteps extends ExtentReportListner {
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer enters username");
 		signinaction.UserName("emonyousufy89@gmail.com");
-		logInfo.pass("User Entered email");
+		logInfo.pass("Email Entered");
 	}
 		catch(AssertionError|Exception e){
-			logInfo.fail("User name typing failed");
+			logInfo.fail("Email not Entered");
 			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
 			}
 	}
@@ -59,7 +59,7 @@ public class SignInSteps extends ExtentReportListner {
 		ExtentTest logInfo = null;
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("When"), "Customer see continue button");
-		logInfo.pass("User can see continue button");
+		logInfo.pass("User see the continue button");
 		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon Sign-In");
 		logInfo.pass("Expected Title : "+"Amazon Sign-In" );
 		logInfo.pass("Actual Title : "+ "Amazon Sign-In" );
@@ -94,10 +94,10 @@ public class SignInSteps extends ExtentReportListner {
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer enters password");
 		signinaction.Password("ScrollDown22");
-		logInfo.pass("User Entered Password");
+		logInfo.pass("Password Entered");
 	}
 		catch(AssertionError|Exception e){
-			logInfo.fail("Wrong password");
+			logInfo.fail("Email not Entered");
 			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
 			}
 		
@@ -126,9 +126,9 @@ public class SignInSteps extends ExtentReportListner {
 		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on account homepage\n" + 
 				"   ");
 		logInfo.pass("Customer Successfully Landed on Amazon User HomePage");
-		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon");
-		logInfo.pass("Expected Title : "+"Amazon" );
-		logInfo.pass("Actual Title : "+ "Amazon" );
+		Assert.assertEquals(Hooks.driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
+		logInfo.pass("Expected Title : "+"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more" );
+		logInfo.pass("Actual Title : "+ "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more" );
 	}
 		catch(AssertionError|Exception e){
 			logInfo.fail("Sign In Failed");
@@ -136,6 +136,6 @@ public class SignInSteps extends ExtentReportListner {
 			}
 		System.out.println("The title of Customer's homepage is : " + Hooks.driver.getTitle());
 	}
-	
+	////span[@class='icp-nav-flag icp-nav-flag-us']
 	
 }

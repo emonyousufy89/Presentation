@@ -39,9 +39,10 @@ public class ExtentReportListner {
 
 			extent = new ExtentReports();
 			extent.attachReporter(reportConfig);
-			extent.setSystemInfo("Application", "Execute Automation");
+			extent.setSystemInfo("Application", "Amazon.com");
 			extent.setSystemInfo("Operating System", System.getProperty("os.name"));
-			extent.setSystemInfo("User1", System.getProperty("user.name"));
+			//extent.setSystemInfo("User1", System.getProperty("user.name"));
+			extent.setSystemInfo("User", "Team Pi");
 			System.out.println("System Info.set in Extent Report");
 
 		} catch (Exception e) {

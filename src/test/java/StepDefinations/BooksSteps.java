@@ -22,12 +22,12 @@ public class BooksSteps extends ExtentReportListner {
 	
 	@Given("^Customer enters item name in the search box$")
 	public void customer_enters_item_name_in_the_search_box() throws Throwable {
-		featureNode = extent.createTest(Feature.class,"Book Shopping from amazon");
-		scenarioNode = featureNode.createNode(Scenario.class,"Customer wants to order picture book for toddler");
+		featureNode = extent.createTest(Feature.class,"Book Shopping from amazon"); ///feature
+		scenarioNode = featureNode.createNode(Scenario.class,"Customer wants to order picture book for toddler");//scenario
 
 		ExtentTest logInfo = null;
 		try{
-		logInfo = scenarioNode.createNode(new GherkinKeyword("Given"), "Customer enters item name in the search box");
+		logInfo = scenarioNode.createNode(new GherkinKeyword("Given"), "Customer enters item name in the search box");//steps
 		 bookaction.EnterSearchItem();
 		
 		logInfo.pass("Customer Entered - books for toddler");
@@ -245,8 +245,8 @@ public class BooksSteps extends ExtentReportListner {
 		logInfo.pass("Customer Successfully lands on check out page and see the price");
 		//Assert.assertEquals(Hooks.driver.toString(), "$39.75");
 		Assert.assertEquals("$39.75", "$39.75");
-		logInfo.pass("Expected Title : " + "$39.75" );
-		logInfo.pass("Actual Title : " + "$39.75" );
+		logInfo.pass("Expected Price : " + "$39.75" );
+		logInfo.pass("Actual Price : " + "$39.75" );
 	}
 		catch(AssertionError|Exception e){
 			logInfo.fail("Check out page is not availabel");
