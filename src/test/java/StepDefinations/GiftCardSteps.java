@@ -167,9 +167,7 @@ import cucumber.api.java.en.Given;
 			ExtentTest logInfo = null;
 			try{
 			logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "the price otal should be 50.00");
-			
 			giftCardActions.CartSubtotal();
-		    
 			logInfo.pass("The price of the gift card is : $50.00");
 			
 			Assert.assertEquals("$50.00", "$50.00");
@@ -177,7 +175,7 @@ import cucumber.api.java.en.Given;
 			logInfo.pass("Actual Price : " + "$50.00" );
 		}
 			catch(AssertionError|Exception e){
-				logInfo.fail("Price not availabel");
+				logInfo.fail("Price not available");
 				logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
 				}
 			

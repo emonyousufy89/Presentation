@@ -12,7 +12,7 @@ public class BooksPage {
 	@FindBy(how=How.XPATH,using="//input[@tabindex='20']")
 	public WebElement SearchIcon;
 	
-	@FindBy(how=How.XPATH,using="//span[@class='a-button-text a-declarative']")
+	@FindBy(how=How.XPATH,using="//span[@class='a-button-text a-declarative']")  //select[@id='s-result-sort-select']
 	public WebElement Sorting;
 	
 	@FindBy(how=How.XPATH,using="//a[contains(text(),'Price: High to Low')]")

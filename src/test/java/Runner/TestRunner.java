@@ -12,7 +12,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions(
         features = "src/presentation/resources/Features",
         glue = {"StepDefinations"},
-        monochrome= false,
+        monochrome= true,
         tags = {"~@Ignore"},
         plugin = {
                 "pretty", 

@@ -179,17 +179,16 @@ public class TelevisionSteps extends ExtentReportListner{
 		ExtentTest logInfo = null;
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on checkOut Page & see the price");
+		//TVaction.pricePrint();
+		logInfo.pass("Total price of the TV with Warrenty is : $ 1329.98");
 		
-		TVaction.pricePrint();
-	    
-		logInfo.pass("Total price of the TV with Warrenty is : $ 1429.98");
 		
-		Assert.assertEquals("$1,429.98", "$1,429.98");
-		logInfo.pass("Expected Price : " + "$$1,429.98" );
-		logInfo.pass("Actual Price : " + "$$1,429.98" );
+		Assert.assertEquals(TVaction.pricePrint(), "$1,329.98");
+		logInfo.pass("Expected Price : " + "$$1,329.98" );
+		logInfo.pass("Actual Price : " + "$1,329.98" );
 	}
 		catch(AssertionError|Exception e){
-			logInfo.fail("Price not availabel");
+			logInfo.fail("Price not available");
 			logInfo.addScreenCaptureFromPath(captureScreenShot(Hooks.driver));
 			}
 	    

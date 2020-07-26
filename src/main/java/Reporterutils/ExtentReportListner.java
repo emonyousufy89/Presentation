@@ -43,7 +43,10 @@ public class ExtentReportListner {
 			extent.setSystemInfo("Operating System", System.getProperty("os.name"));
 			//extent.setSystemInfo("User1", System.getProperty("user.name"));
 			extent.setSystemInfo("User", "Team Pi");
-			System.out.println("System Info.set in Extent Report");
+			extent.setSystemInfo("Tester1: SignIn,SignUp,Books Shopping,Electronics Shopping", "Emon");
+			extent.setSystemInfo("Tester2: Fruit Shopping", "Morshed");
+			extent.setSystemInfo("Tester3: Gift Card Shopping", "Rizwana");
+			System.out.println("System Info.Set in Extent Report");
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

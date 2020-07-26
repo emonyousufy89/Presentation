@@ -23,41 +23,41 @@ public class GiftCardActions {
 	public void clickGiftCardLink() throws InterruptedException {
 		
 		giftCardPage.giftcardlink.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void chooseDeliveryType() throws InterruptedException {
 		giftCardPage.chooseDeliveryType.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void chooseFeaturdBrands() throws InterruptedException {
 		giftCardPage.chooseFeaturedBrands.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void entersPriceRange() throws InterruptedException {
 		giftCardPage.entersPriceRange.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void chooseFormat() throws InterruptedException {
 		giftCardPage.chooseFormat.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void clickstheCard() throws InterruptedException {
 		giftCardPage.clickstheCard.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void addstoShoppingcart() throws InterruptedException {
 		giftCardPage.addsthecardtoShoppingCart.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
-	public void CartSubtotal() throws InterruptedException {
-		giftCardPage.CartSubtotal.getText();
+	public String CartSubtotal() throws InterruptedException {
+		return giftCardPage.CartSubtotal.getText();
 	}
 }
 

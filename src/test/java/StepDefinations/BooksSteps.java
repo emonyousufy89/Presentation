@@ -240,11 +240,11 @@ public class BooksSteps extends ExtentReportListner {
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("Then"), "Customer lands on the check out option page");
 		
-		bookaction.PrintThePrice();
+		
 	    
 		logInfo.pass("Customer Successfully lands on check out page and see the price");
 		//Assert.assertEquals(Hooks.driver.toString(), "$39.75");
-		Assert.assertEquals("$39.75", "$39.75");
+		Assert.assertEquals(bookaction.PrintThePrice(), "$39.75");
 		logInfo.pass("Expected Price : " + "$39.75" );
 		logInfo.pass("Actual Price : " + "$39.75" );
 	}
