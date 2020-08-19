@@ -46,7 +46,7 @@ public class SignInSteps extends ExtentReportListner {
 		ExtentTest logInfo = null;
 		try{
 		logInfo = scenarioNode.createNode(new GherkinKeyword("And"), "Customer enters username");
-		signinaction.UserName("emonyousufy89@gmail.com");
+		signinaction.UserName("emonyousufy@gmail.com");
 		logInfo.pass("Email Entered");
 	}
 		catch(AssertionError|Exception e){
